@@ -1,0 +1,21 @@
+<div clas ="menu-list">
+<div class="menu-list">
+
+  <ul class="menus list-group">
+    <% @menus.each do |menu| %>
+      <%= render 'menu', :menu => menu %>
+    <% end %>
+  </ul>
+</div>
+<%= link_to "New Menu", "#", :class => 'new-menu' %>
+
+<%= form_for @menu, :remote => true, :html => {:class => 'hidden'} do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit "Add Menu" %>
+<% end %>
+
+
+
+
+
