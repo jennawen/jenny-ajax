@@ -1,13 +1,5 @@
-<div clas ="menu-list">
-<div class="menu-list">
-
-  <ul class="menus list-group">
-    <% @menus.each do |menu| %>
-      <%= render 'menu', :menu => menu %>
-    <% end %>
-  </ul>
-</div>
 <%= link_to "New Menu", "#", :class => 'new-menu' %>
+
 
 <%= form_for @menu, :remote => true, :html => {:class => 'hidden'} do |f| %>
   <%= f.label :name %>
@@ -16,6 +8,15 @@
 <% end %>
 
 
+<h2>Menus</h2>
+<div class="menu-list">
+
+  <ul class="menus list-group">
+    <% @menus.each do |menu| %>
+      <%= render 'menu', :menu => menu %>
+    <% end %>
+  </ul>
+</div>
 
 
 
