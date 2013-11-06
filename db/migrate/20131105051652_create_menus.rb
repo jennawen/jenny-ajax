@@ -3,6 +3,5 @@ class CreateMenus < ActiveRecord::Migration
     create_table :menus do |t|
       t.string :name
       t.timestamps
-    end
   end
 end

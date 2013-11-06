@@ -1,6 +1,8 @@
 JennyAjax::Application.routes.draw do
   root :to => 'menus#index'
-  resources :menus, :only => [:index, :create]
+  resources :menus, :only => [:index, :create, :show] do
+    resources :items, :only => [:create]
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

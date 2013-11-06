@@ -10,6 +10,11 @@ body {
   background-color: lightgray;
 }
 
+#main-title a {
+  text-decoration: none;
+  font-size: 2em;
+  color: gray;
+}
 
 .menu-list ul {
   padding: 0;
@@ -28,4 +33,8 @@ body {
 
 .menu-form {
   margin-top: 10;
+}
+
+.detail-form {
+  display: none;
 }

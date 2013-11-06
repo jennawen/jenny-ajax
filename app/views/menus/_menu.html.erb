@@ -1,1 +1,3 @@
-<li class="list-group-item"><%= menu.name %></li>
+<li class="list-group-item"><%= menu.name %> <%= link_to "details", menu_path(menu), :class => "details-view"  %></li>
+
+<%= render 'menudetail', :menu => menu %>
